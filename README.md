@@ -1,66 +1,66 @@
-# AlexandriaAlexandria Beta — Discord Bot
+# Alexandria Beta — Discord Bot
 
-Alexandria Beta is a multipurpose Discord bot built using Python and discord.py with slash commands.
-It includes utility tools, moderation features, games, leveling, polls, and more.
+Alexandria Beta is a multipurpose Discord bot built using **Python** and **discord.py** with slash commands.  
+It includes **utility tools, moderation features, leveling, games, polls, and IP lookup**.
 
-🚀 Features
-🛠 Utility
+---
 
-/ping — Check bot latency
+## 🚀 Features
 
-/coin — Flip a coin
+### 🛠 Utility Commands
+- `/ping` — Bot latency  
+- `/coin` — Coin flip  
+- `/userinfo` — View user info  
+- `/serverinfo` — Server details  
+- `/avatar` — Get a user’s profile picture  
 
-/userinfo — View user info
+---
 
-/serverinfo — Basic server info
+## 🛡 Moderation  
+Only admins or approved roles can use these:
+- `/kick` — Kick a user  
+- `/ban` — Ban a user  
+- `/clear` — Bulk delete messages  
 
-🛡 Moderation
+Role verification and permission checks are built into the moderation cog.
 
-(Admin-only commands)
+---
 
-/kick — Kick a user
+## 📈 Leveling System
+Users gain XP automatically when sending messages.  
+Evolution stages are assigned based on level ranges:
 
-/ban — Ban a user
+- **Stage 1:** Levels 1–10  
+- **Stage 2:** Levels 11–20  
+- **Stage 3:** Levels 21+  
 
-/clear — Bulk delete messages
+Stage names are customizable inside the leveling cog.
 
-Role-based protection (only admin or approved roles)
+---
 
-📈 Leveling System
+## 🎮 Games
+Three interactive slash-command games:
+- `/guess` — Number guessing game  
+- `/rps` — Rock–Paper–Scissors  
+- `/dice` — Roll a random dice  
 
-XP gained per message
+---
 
-Evolution stages (custom names) based on level brackets
+## 🗳 Poll System
+- `/poll` — Create reaction-based polls  
+- Supports multiple voting options  
 
-Stage 1 → Level 1–10
+---
 
-Stage 2 → Level 11–20
+## 🌐 IP Lookup
+- `/iplookup` — Retrieves basic public IP information using a free lookup service  
+- No paid API or authentication required  
 
-Stage 3 → Level 21+
+---
 
-🎮 Games
+## 🏗 Project Structure
 
-Includes 3 interactive slash-command games:
-
-/guess — Number guessing
-
-/rps — Rock–Paper–Scissors
-
-/dice — Roll a random dice
-
-🗳 Poll System
-
-/poll — Create interactive reactions-based polls
-
-Supports multi-option polls
-
-🌐 Extra Tools
-
-/iplookup — Basic IP information lookup (public API)
-
-/avatar — Show someone's profile picture
-
-🏗 Project Structure
+```
 Alexandria-Beta/
 │── cogs/
 │   ├── utility.py
@@ -68,54 +68,17 @@ Alexandria-Beta/
 │   ├── leveling.py
 │   ├── games.py
 │   ├── polls.py
+│   ├── iplookup.py
 │── main.py
 │── README.md
 │── requirements.txt
 │── .gitignore
+```
 
-🔐 Environment Variables (IMPORTANT)
+---
 
-Create a .env file locally containing:
+## 📌 Notes
+- This project is **not licensed**.  
+- Copying, redistributing, or reusing any part of this project is **not permitted**.  
+- Intended strictly for private use.
 
-TOKEN=your_discord_bot_token_here
-
-
-This file is never uploaded because .gitignore protects it.
-
-When deploying on Render or other cloud platforms, add:
-
-TOKEN as an environment variable
-
-▶️ Running Locally
-1. Create virtual environment
-python -m venv .venv
-source .venv/bin/activate    # Linux/Mac
-.venv\Scripts\activate       # Windows
-
-2. Install dependencies
-pip install -r requirements.txt
-
-3. Run the bot
-python main.py
-
-☁️ Deploying on Render
-
-Push your code to GitHub
-
-Create a new Web Service on Render
-
-Set Start Command:
-
-python main.py
-
-
-Add Environment Variables:
-
-TOKEN = <your_token>
-
-
-Deploy 🎉
-
-📜 License
-
-This project is free to use, modify, and improve.
