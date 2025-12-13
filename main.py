@@ -22,7 +22,6 @@ COGS = [
     "iplookup"
 ]
 
-# Load cogs properly (ASYNC)
 async def load_cogs():
     for cog in COGS:
         await bot.load_extension(f"cogs.{cog}")
@@ -39,5 +38,4 @@ async def main():
         await load_cogs()
         await bot.start(TOKEN)
 
-# Start bot
 asyncio.run(main())
